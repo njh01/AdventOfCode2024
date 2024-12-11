@@ -17,10 +17,7 @@ def problem3_part2(file):
     fopen = open(file,'rb')
     data = str(fopen.read())
     instructions = re.findall("mul\(\d+,\d+\)|do\(\)|don't\(\)",data)
-    if instructions[0] == "do()":
-        valid = True
-    else: 
-        valid = False
+    valid = True
     sum = 0
     for entry in instructions:
         if entry == 'do()':
